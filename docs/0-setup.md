@@ -19,9 +19,9 @@ These instructions will set up your workshop environment.
 
 When the script is finished, verify it worked correctly.
 
-    ```console
-    kubectl get pods -n sec-ctx
-    ```
+```console
+kubectl get pods -n sec-ctx
+```
 
 The output should look similar to this (some workloads are crashing which is expected at this point):
 

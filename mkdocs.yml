@@ -3,6 +3,8 @@ repo_name: 'swade1987/batten-down-the-hatches'
 repo_url: 'https://github.com/swade1987/batten-the-hatches'
 dev_addr: 0.0.0.0:8080
 
+site_dir: public
+
 theme:
   name: 'material'
   palette:
