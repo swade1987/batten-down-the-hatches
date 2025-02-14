@@ -11,11 +11,8 @@ Congrats! You've made it to the end of the workshop. 🎉
 
 ## Feedback
 
-If you could take two minutes to fill in the feedback form [here](https://forms.gle/aNuFoEgquHn5Lvqa6) it would be greatly appreciated.
+TODO
 
 ## Reach out
 
-If you have any questions or feedback, please reach out to Jimmy and myself:
-
-- Twitter: [@jimmesta](https://twitter.com/jimmesta) and [@swade1987](https://twitter.com/swade1987)
-- Email: jimmy@ksoc.com and steve@ksoc.com
+If you have any questions or feedback, please reach out to me on [LinkedIn](https://www.linkedin.com/in/stevendavidwade/).
