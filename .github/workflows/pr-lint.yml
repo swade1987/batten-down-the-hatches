@@ -12,7 +12,7 @@ permissions:
   pull-requests: read
 
 jobs:
-  lint:
+  pr-lint:
     name: pr-lint
     runs-on: ubuntu-latest
     steps:
