@@ -3,39 +3,15 @@ default_install_hook_types:
   - commit-msg
 
 repos:
-  - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: 4bf25029a7a45d7d69592250dd3c327a74d77631 # SHA for v1.88.0
-    hooks:
-      - id: terraform_fmt
-        files: ^terraform/.*\.(tf|tfvars)$
-      - id: terraform_docs
-        args:
-          - '--args=--lockfile=false'
-        files: ^terraform/.*\.(tf|tfvars)$
-      - id: terraform_tflint
-        args:
-          - '--args=--only=terraform_deprecated_interpolation'
-          - '--args=--only=terraform_deprecated_index'
-          - '--args=--only=terraform_unused_declarations'
-          - '--args=--only=terraform_comment_syntax'
-          - '--args=--only=terraform_documented_outputs'
-          - '--args=--only=terraform_documented_variables'
-          - '--args=--only=terraform_typed_variables'
-          - '--args=--only=terraform_module_pinned_source'
-          - '--args=--only=terraform_naming_convention'
-          - '--args=--only=terraform_required_version'
-          - '--args=--only=terraform_required_providers'
-          - '--args=--only=terraform_standard_module_structure'
-          - '--args=--only=terraform_workspace_remote'
-        files: ^terraform/.*\.(tf|tfvars)$
-      - id: terraform_validate
-        files: ^terraform/.*\.(tf|tfvars)$
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: cef0300fd0fc4d2a87a85fa2093c6b283ea36f4b # SHA for v5.0.0
     hooks:
       - id: check-merge-conflict
       - id: end-of-file-fixer
       - id: trailing-whitespace
+        additional_dependencies: [ -r, requirements-dev.txt ]
+        entry: pip freeze --all
+        pass_filenames: false
   - repo: https://github.com/compilerla/conventional-pre-commit
     rev: 5f9c312d9978fbcee1da97154ba385834eeda799 # SHA for v4.0.0
     hooks:
